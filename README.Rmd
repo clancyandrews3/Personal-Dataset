@@ -5,6 +5,9 @@ date: "12/7/2021"
 output: pdf_document
 ---
 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
 
 ## Motivation:
 
@@ -13,6 +16,28 @@ I am using the 2021 Caribou Trail High School Cross Country League rankings as t
 ## Data Process:
 
 I got the data from Athletic.net, a cross country and track & field database ( https://www.athletic.net/CrossCountry/Division/List.aspx?DivID=61478 ). The database I used does not have a proper method of exporting the data, so I had to manually extract the top 50 individuals in the league. The data that I extracted was fairly small and clean as it was, so there was no need for cleaning. Working with the data, I had a couple of integer value data types that helped with visualization and analysis. The hardest part about the data was that to answer a majority of the questions, I had to convert the times, that were a string data type, to a numeric float data type. That process took a while with some trial and error.
+
+```{r Import Data}
+runningdata = read.csv("./CaribouTrailLeagueRankings.csv")
+```
+
+```{r Time to Seconds}
+for (item in runningdata) {
+timeSplit = c(strsplit(runningdata$Time, ':')) #Splits up time string
+timeList = as.numeric(unlist(timeSplit)) #Creates a list of numeric values
+}
+timeMin = timeList[seq(1, length(timeList), 2)] #Gets individual values for minutes
+timeSec = timeList[seq(2, length(timeList), 2)] #Gets individual values for seconds
+for (item in timeMin) { #Converts minutes to seconds
+timeMinToSec = c(timeMin * 60)
+}
+for (item in timeMinToSec) { #Combines converted minutes and additional seconds
+times = c(timeMinToSec + timeSec)
+}
+#Create new dataframe with added times in seconds column
+runningdata1 = runningdata
+runningdata1$TimeInSeconds = c(times)
+```
 
 ## Visualization:
 
