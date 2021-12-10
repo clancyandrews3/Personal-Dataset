@@ -9,9 +9,9 @@ output: md_document
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-#Clancy Andrews
-#Personal Project
-#Fall 2021
+# Clancy Andrews
+# Personal Project
+# Fall 2021
 
 ## Motivation:
 

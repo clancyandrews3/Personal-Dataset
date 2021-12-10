@@ -1,4 +1,8 @@
-\#Clancy Andrews \#Personal Project \#Fall 2021
+# Clancy Andrews
+
+# Personal Project
+
+# Fall 2021
 
 ## Motivation:
 
@@ -52,7 +56,7 @@ to the other grade levels.
 
 ## Analysis:
 
-![](README_files/figure-markdown_strict/unnamed-chunk-2-1.png)![](README_files/figure-markdown_strict/unnamed-chunk-2-2.png)![](README_files/figure-markdown_strict/unnamed-chunk-2-3.png)![](README_files/figure-markdown_strict/unnamed-chunk-2-4.png)![](README_files/figure-markdown_strict/unnamed-chunk-2-5.png)![](README_files/figure-markdown_strict/unnamed-chunk-2-6.png)![](README_files/figure-markdown_strict/unnamed-chunk-2-7.png)![](README_files/figure-markdown_strict/unnamed-chunk-2-8.png)![](README_files/figure-markdown_strict/unnamed-chunk-2-9.png)![](README_files/figure-markdown_strict/unnamed-chunk-2-10.png)![](README_files/figure-markdown_strict/unnamed-chunk-2-11.png)![](README_files/figure-markdown_strict/unnamed-chunk-2-12.png)![](README_files/figure-markdown_strict/unnamed-chunk-2-13.png)![](README_files/figure-markdown_strict/unnamed-chunk-2-14.png)
+![](README_files/figure-markdown_strict/unnamed-chunk-2-1.png)![](README_files/figure-markdown_strict/unnamed-chunk-2-2.png)![](README_files/figure-markdown_strict/unnamed-chunk-2-3.png)![](README_files/figure-markdown_strict/unnamed-chunk-2-4.png)![](README_files/figure-markdown_strict/unnamed-chunk-2-5.png)![](README_files/figure-markdown_strict/unnamed-chunk-2-6.png)![](README_files/figure-markdown_strict/unnamed-chunk-2-7.png)![](README_files/figure-markdown_strict/unnamed-chunk-2-8.png)![](README_files/figure-markdown_strict/unnamed-chunk-2-9.png)![](README_files/figure-markdown_strict/unnamed-chunk-2-10.png)![](README_files/figure-markdown_strict/unnamed-chunk-2-11.png)![](README_files/figure-markdown_strict/unnamed-chunk-2-12.png)
 
 I applied k-means clustering to my data because it can effectively
 display the cluster of runners based on there time and grade level. From
