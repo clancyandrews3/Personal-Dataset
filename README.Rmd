@@ -2,12 +2,16 @@
 title: "Personal Project"
 author: "Clancy Andrews"
 date: "12/7/2021"
-output: pdf_document
+output: md_document
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
+
+#Clancy Andrews
+#Personal Project
+#Fall 2021
 
 ## Motivation:
 
@@ -41,7 +45,23 @@ runningdata1$TimeInSeconds = c(times)
 
 ## Visualization:
 
+```{r}
+plot(x = runningdata1$Rank, y = runningdata1$TimeInSeconds, main = "League Rankings vs Time (Seconds)", xlab = "League Rankings", ylab = "Time (Seconds)")
+v = c(runningdata1$Grade)
+boxplot(runningdata1$TimeInSeconds ~ runningdata1$Grade, main = "Grade vs Time (Seconds)", xlab = "Grade Level", ylab = "Time (Seconds)")
+```
+The first image is a scatter plot of the league rankings versus the time in seconds of each competitor. There is a gradual, linear pattern in the middle of the plot but at the top and end ranked runners, the curve becomes more exaggerated. This is due to the top and end ranked runners having different levels of endurance and speed, resulting in a larger gap of time between them and the next runner.
 
+The second image is a box plot of the times for the runners versus the grade levels of the runners. I found this plot interesting. By observation, we see that a majority of the runners in grade 10 and 11 are widely distributed in terms of how fast they can run the race. We can see that grade 9 runners are naturally slower overall (due to body maturity and experience). The most interesting observation is that grade 12 runners are more tightly distributed and are slower overall, compared to the other grade levels. 
 
 ## Analysis:
 
+```{r}
+library(animation)
+kmeans.ani(runningdata1[,c(8,2)], 6)
+```
+
+I applied k-means clustering to my data because it can effectively display the cluster of runners based on
+there time and grade level. From first glance, you can see that the faster the athlete is, less likely they are
+to be younger, i.e., grade 9. You can also see that a majority of the faster clustered runners are grade 11 and 12
+and a majority of the runners in the league are grade in grades 10 and 11. A major differentiation between great runners and good runners in the high school setting is if the individual can break the 20 minute mark for the 5000 meters (1200 seconds). When observing the clusters, I have noticed that a majority of the runners who are around the 20 minute mark are older. There is also evidence to show which people are more likely to succeed in the future. This can be seen by the cluster second most from the left.
